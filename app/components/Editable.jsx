@@ -1,8 +1,10 @@
 import React from 'React';
+import classnames from 'classnames';
 
-export default ({editing, value, onEdit, ...props}) => {
+
+export default ({editing, value, onEdit, className, ...props}) => {
 	if(editing) {
-		return <Edit value={value} onEdit={onEdit} {...props}/>;
+		return <Edit value={value} onEdit={onEdit}  className={className} {...props}/>;
 	} else {
 		return (<span {...props}>{value}</span>);
 	}
@@ -16,10 +18,11 @@ class Edit extends React.Component {
 	}
 
 	render() {
-		const {value, ...props} = this.props;
+		const {className, onEdit, value, ...props} = this.props;
 
 		return (
 			<input
+				className={classnames('edit', className)}
 				type="text"
 				autoFocus={true}
 				defaultValue={value}

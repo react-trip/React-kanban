@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-survivejs-kanban": "^0.3.3",
+    "classnames": "^2.2.5",
     "clean-webpack-plugin": "^0.1.9",
     "css-loader": "^0.23.1",
     "eslint": "2.10.2",
@@ -54,6 +55,7 @@
     "webpack-validator": "^2.1.1"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   }
