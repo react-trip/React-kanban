@@ -6,7 +6,10 @@ export default ({notes, onDelete=() => {}}) => {
     <ul>
     {notes.map( ({id, task}) => 
       <li key={id} >
-        <Note task={task} onDelete={onDelete.bind(null, id)}/>
+        <Note>
+          <span>{task}</span>
+          <button onClick={onDelete.bind(null, id)}></button>
+        </Note>
       </li>)
     }
     </ul>
