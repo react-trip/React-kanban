@@ -1,8 +1,15 @@
 import React from 'react';
+import Note from './Note'
 
-export default ({notes}) => {
+export default ({notes, onDelete=() => {}}) => {
 	return (
-    <ul>{notes.map(note => <li key={note.id}>{note.task}</li>)}</ul>
+    <ul>
+    {notes.map( ({id, task}) => 
+      <li key={id} >
+        <Note task={task} onDelete={onDelete.bind(null, id)}/>
+      </li>)
+    }
+    </ul>
   );
 };
 
